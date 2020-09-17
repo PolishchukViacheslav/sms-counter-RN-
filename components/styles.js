@@ -21,35 +21,37 @@ export const styles = StyleSheet.create({
   textArea: {
     height: 150,
     justifyContent: 'flex-start',
+    fontSize: 18,
   },
   mesLenSettContainer: {
+    flex: 1,
     flexDirection: 'row',
   },
   mesLenSettInputWrapper: {
     width: 60,
+    height: 60,
+    marginRight: 60,
     backgroundColor: '#fff',
     borderWidth: 1,
-    borderColor: Colors.grey20,
+    borderColor: 'black',
     borderRadius: 8,
   },
   mesLenSettInput: {
     textAlign: 'center',
     height: 60,
     width: 60,
-    justifyContent: 'center',
     fontSize: 22,
   },
   mesLenSettTitleWrapper: {
     width: 220,
-    height: 100,
-    borderWidth: 1,
-    borderColor: Colors.grey20,
+    height: 60,
+    justifyContent: 'center',
   },
   mesLenSettTitle: {
-    height: 60,
+    textAlign: 'center',
     width: 220,
-    borderWidth: 1,
-    borderColor: Colors.grey20,
+    borderColor: 'black',
+    fontSize: 26,
   },
 });
 

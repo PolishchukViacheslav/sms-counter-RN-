@@ -12,6 +12,7 @@ export const MessageLengthSetter = () => {
   const [smsLength, setSmsLength] = useState();
 
   const handleSmsLength = (value) => {
+    console.log('ert');
     const patter = /^[0-9]*$/;
     const preparedValue = value.trim();
     if (patter.test(preparedValue)) {
@@ -20,7 +21,7 @@ export const MessageLengthSetter = () => {
   };
 
   return (
-    <View styles={mesLenSettContainerStyle}>
+    <View style={mesLenSettContainerStyle}>
       <View style={mesLenSettInputWrapperStyle}>
         <TextInput
           style={mesLenSettInputStyles}
@@ -30,8 +31,8 @@ export const MessageLengthSetter = () => {
           onChangeText={handleSmsLength}
         />
       </View>
-      <View styles={mesLenSettTitleWrapperStyles}>
-        <Text style={mesLenSettTitleStyles}>kjhghjg</Text>
+      <View style={mesLenSettTitleWrapperStyles}>
+        <Text style={mesLenSettTitleStyles}>символів</Text>
       </View>
     </View>
   );
