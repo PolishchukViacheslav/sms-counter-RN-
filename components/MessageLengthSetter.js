@@ -8,15 +8,15 @@ import {
   mesLenSettTitleStyles,
 } from './styles';
 
-export const MessageLengthSetter = () => {
+export const MessageLengthSetter = ({ sendOnChange }) => {
   const [smsLength, setSmsLength] = useState();
 
   const handleSmsLength = (value) => {
-    console.log('ert');
     const patter = /^[0-9]*$/;
     const preparedValue = value.trim();
     if (patter.test(preparedValue)) {
       setSmsLength(preparedValue);
+      sendOnChange(preparedValue);
     }
   };
 

@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import { TextInput, View } from 'react-native';
 import { textAreaContainerStyles, textAreaStyles } from './styles';
 
-export const Message = () => {
+export const Message = ({ sendOnChange }) => {
   const [text, setText] = useState('');
 
-  const handleTextChange = (inputText) => setText(inputText);
+  const handleTextChange = (inputText) => {
+    const preparedInputText = inputText.trimStart();
+    setText(preparedInputText);
+    sendOnChange(preparedInputText);
+  };
 
   return (
     <View style={textAreaContainerStyles}>
